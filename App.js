@@ -42,7 +42,7 @@ function onInitialize() {
 onInitialize();
 
 function onTavern() {
-  updateHP(100);
+  updateHP(10);
   updateGold(-5);
 }
 function onDungeon() {
@@ -66,17 +66,17 @@ function updateHP(val) {
 }
 
 function updateGold(val) {
-  goldVal = val;
-  goldVal.textContent = goldVal;
+  goldVal += val;
+  goldText.textContent = goldVal;
 }
 
 function updateXP() {
   xpVal++;
-  if (xpVal >= 100) {
+  if (xpVal >= 10) {
     xpVal = 0;
     updateLevel();
   }
-  xpVal.textContent = xpVal;
+  xpText.textContent = xpVal;
 }
 
 function updateLevel() {
